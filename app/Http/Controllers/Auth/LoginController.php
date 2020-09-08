@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * Set authentication field to username instead of the default email
+     *
+     * @return string table column to be used for authenticating
+     */
+    public function username()
+    {
+        return 'username';
+    }
 }

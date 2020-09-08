@@ -27,14 +27,14 @@ class CreateForeignKeys extends Migration {
 
 	public function down()
 	{
-		Schema::table('Address', function(Blueprint $table) {
-			$table->dropForeign('Address_user_id_foreign');
+		Schema::table('address', function(Blueprint $table) {
+			$table->dropForeign('address_user_id_foreign');
 		});
-		Schema::table('UserRole', function(Blueprint $table) {
-			$table->dropForeign('UserRole_user_id_foreign');
+		Schema::table('user_role', function(Blueprint $table) {
+			$table->dropForeign('user_role_user_id_foreign');
 		});
-		Schema::table('UserRole', function(Blueprint $table) {
-			$table->dropForeign('UserRole_role_id_foreign');
+		Schema::table('user_role', function(Blueprint $table) {
+			$table->dropForeign('user_role_role_id_foreign');
 		});
 	}
 }

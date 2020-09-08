@@ -5,6 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateUserTable extends Migration {
 
+    public $table = "user";
+
 	public function up()
 	{
 		Schema::create('user', function(Blueprint $table) {
@@ -17,12 +19,12 @@ class CreateUserTable extends Migration {
 			$table->boolean('banned')->default(false);
             $table->rememberToken();
 			$table->timestamps();
-			$table->datetime('last_login');
+			$table->timestamp('last_login')->useCurrent();
 		});
 	}
 
 	public function down()
 	{
-		Schema::drop('User');
+		Schema::drop('user');
 	}
 }

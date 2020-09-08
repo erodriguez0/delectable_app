@@ -5,6 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateAddressTable extends Migration {
 
+    public $table = "address";
+
 	public function up()
 	{
 		Schema::create('address', function(Blueprint $table) {
@@ -22,6 +24,6 @@ class CreateAddressTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('Address');
+		Schema::drop('address');
 	}
 }

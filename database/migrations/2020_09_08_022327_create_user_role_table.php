@@ -5,6 +5,8 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateUserRoleTable extends Migration {
 
+    public $table = "user_role";
+
 	public function up()
 	{
 		Schema::create('user_role', function(Blueprint $table) {
@@ -17,6 +19,6 @@ class CreateUserRoleTable extends Migration {
 
 	public function down()
 	{
-		Schema::drop('UserRole');
+		Schema::drop('user_role');
 	}
 }

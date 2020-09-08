@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Address extends Model 
+class Address extends Model
 {
 
-    protected $table = 'Address';
+    protected $table = 'address';
     public $timestamps = true;
     protected $fillable = array('address', 'address2', 'locality', 'province', 'postcode', 'country');
     protected $visible = array('address', 'address2', 'locality', 'province', 'postcode', 'country');
