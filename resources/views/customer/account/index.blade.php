@@ -48,12 +48,13 @@
 
 {{--        </div>--}}
 {{--    </div>--}}
-<div class="container my-4">
+<div class="content container py-4 py-md-5">
     <div class="row">
         <div class="col-12">
-            <span class="h3">Account Details</span><span class="ml-3"><a href="#">Edit Account</a></span>
+
+            <span class="h3">Account Details</span><a class="ml-3" href="#">Edit Account</a>
             <hr>
-            <div class="account-details mb-5">
+            <div class="account-details mb-4 mb-md-5">
                 <div class="account-details-col-1 text-bold">
                     <label>Name:</label>
                     <br>
@@ -77,8 +78,9 @@
                     <label>(661) 325-7217</label>
                 </div>
             </div>
-            <span class="h3">Recent Orders</span><span class="ml-3"><a href="#">View All Orders</a></span>
-            <hr>
+
+            <span class="h3">Recent Orders</span><a class="ml-3" href="{{ route('orders') }}">View All Orders</a>
+            <hr class="mb-0">
             <div class="account-recent-orders mb-5">
                 <div class="table-wrap">
                 <table class="table table-hover">

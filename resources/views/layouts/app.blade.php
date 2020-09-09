@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Delectable') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -38,7 +39,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto text-bold">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -51,17 +52,17 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="{{ route('reserve') }}"><b>{{ __('Reserve') }}</b></a>
+                                <a class="nav-link brand-color" href="{{ route('reserve') }}">{{ __('Reserve') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('reserve') }}">{{ __('About') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('reserve') }}">{{ __('Own A Restaurant?') }}</a>
+                                <a class="nav-link" href="{{ route('reserve') }}">{{ __('For Restaurants') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" v-pre>
-                                    <b>{{ Auth::user()->username }}</b><i class="fa fa-user ml-2"></i>
+                                    {{ Auth::user()->username }}<i class="fa fa-user ml-2"></i>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -88,7 +89,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

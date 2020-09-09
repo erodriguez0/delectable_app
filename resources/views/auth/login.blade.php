@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<div class="container content justify-content-center d-flex">
+    <div class="row w-100 mt-5">
+        <div class="col-md-8 mx-auto">
+{{--            <div class="card">--}}
+{{--                <div class="card-header">{{ __('Login') }}</div>--}}
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+{{--                <div class="card-body">--}}
+                    <span class="h3">Login</span>
+                    <hr>
+                    <form class="mt-4" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -65,8 +67,8 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </div>

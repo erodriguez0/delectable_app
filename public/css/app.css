@@ -17008,10 +17008,39 @@ readers do not read off random characters that represent icons */
 html,
 body {
   height: 100%;
+  background-color: #4c110f;
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.content.container {
+  min-height: calc(100vh - 57.41px);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #fff;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.brand-color {
+  color: #891b17 !important;
+}
+
+a.brand-color:hover {
+  color: #4c110f !important;
+}
+
+.saira-con {
+  font-family: "Saira Semi Condensed", sans-serif;
 }
 
 .account-details {
@@ -17025,10 +17054,6 @@ a:hover {
 
 .account-details-col-2 {
   width: 75%;
-}
-
-.text-bold {
-  font-weight: bold;
 }
 
 .account-details label {
@@ -17050,12 +17075,31 @@ a:hover {
   background-color: #4e555b;
 }
 
+.account-recent-orders table th {
+  border-top: none;
+}
+
 .account-recent-orders table th,
 .account-recent-orders table td {
   white-space: nowrap;
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .content.container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 @media (min-width: 992px) {
+  .container {
+    max-width: 1140px;
+  }
+
   .account-details-col-1 {
     width: 20%;
   }
@@ -17066,11 +17110,6 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
-  img.user-profile {
-    width: 350px;
-    height: 350px;
-  }
-
   .account-details-col-1 {
     width: 15%;
   }
