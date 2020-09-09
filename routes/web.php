@@ -19,4 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/reserve', 'ReserveController@index')->name('reserve');
+
+Route::prefix('account')->group(function () {
+    Route::get('/', 'AccountController@index')->name('account');
+    Route::get('/orders', 'AccountController@orders')->name('orders');
+});
